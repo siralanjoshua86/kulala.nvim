@@ -51,7 +51,7 @@ M.toggle_winbar_tab = function(buf, win_id, view)
   local config = CONFIG.get()
   local keymaps = type(config.kulala_keymaps) == "table" and config.kulala_keymaps or KEYMAPS.setup_kulala_keymaps(buf)
 
-  if not (win_id and config.winbar) then return UI_utils.set_virtual_text(buf, 0, "? - help", 0, 0) end
+  if not (win_id and config.winbar) then return end
 
   local winbar = config.default_winbar_panes
   local winbar_title = {}
